@@ -1,12 +1,10 @@
-import { res_details } from "../../enums/restaurant";
 import RestaurantCard from "../RestaurantCard/RestaurantCard";
 
 import styles from "./Body.module.css";
 
-const Body = () => {
+const Body = ({res_details}) => {
   return (
-    <div className="body">
-      <div> Search</div>
+    <div className={styles.body}>
       <div className={styles.resContainers}>
         {res_details.map((details) => (
           <RestaurantCard key={details.id} details={details} />
