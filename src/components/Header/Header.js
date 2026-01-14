@@ -2,7 +2,7 @@ import logo from "../../assets/logo.png";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./Header.module.css";
 
-const Header = ({ searchValue, setSearchValue, filterByRatings }) => {
+const Header = ({ searchValue, setSearchValue, filterByRatings, sortOrder }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -23,7 +23,7 @@ const Header = ({ searchValue, setSearchValue, filterByRatings }) => {
         <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
 
         <button className={styles.sortBtn} onClick={filterByRatings}>
-          Filter By Ratings ▼
+         {sortOrder === "ASC" ? 'Filter By Ratings ▼' : 'Filter By Ratings ▲'} 
         </button>
       </div>
     </div>

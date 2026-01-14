@@ -8,23 +8,18 @@ const RestaurantCard = ({ details }) => {
       <div className={styles.info}>
         <div className={styles.titleRow}>
           <div className={styles.name}>{details?.name}</div>
-          <div
-            className={`${styles.status} ${
-              details?.status === "OPEN" ? `${styles.open}` : `${styles.closed}`
-            }`}
-          >
-            {details?.status}
-          </div>
         </div>
 
-        <div className={styles.cuisine}>{details?.cuisines?.join(" • ")}</div>
+        <div className={styles.cuisine}>{details?.cuisine}</div>
+        <div className={styles.cuisine}>{details?.mealType?.join(" • ")}</div>
+
 
         <div className={styles.meta}>
           <div>⭐ {details?.rating}</div>
           <div>•</div>
-          <div>{details?.deliveryTime}</div>
+          <div>{details?.prepTimeMinutes + details?.cookTimeMinutes}</div>
           <div>•</div>
-          <div>₹{details?.avgCost}</div>
+          <div>₹{details?.caloriesPerServing}</div>
         </div>
       </div>
 
