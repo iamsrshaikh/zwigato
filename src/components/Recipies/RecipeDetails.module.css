@@ -1,0 +1,82 @@
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: ProximaNova, Arial, sans-serif;
+  color: #282c3f;
+}
+
+.header {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.image {
+  width: 280px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.meta {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: #686b78;
+  margin-bottom: 12px;
+}
+
+.time {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.steps {
+  padding-left: 18px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #e9e9eb;
+  font-size: 14px;
+  font-weight: 500;
+}

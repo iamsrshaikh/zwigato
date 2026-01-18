@@ -1,9 +1,9 @@
 import './Shimmer.css';
 
-const Shimmer = () => {
+const Shimmer = ({noOfArray}) => {
   return (
     <div className="shimmer-container">
-      {Array(12)
+      {Array(noOfArray || 12)
         .fill("")
         .map((_, index) => (
           <div className="shimmer-card" key={index}>

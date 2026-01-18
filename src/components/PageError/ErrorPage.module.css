@@ -1,0 +1,52 @@
+.errorContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #282c3f;
+  text-align: center;
+  padding: 24px;
+  font-family: ProximaNova, Arial, Helvetica, sans-serif;
+}
+
+.errorCode {
+  font-size: 96px;
+  font-weight: 800;
+  margin: 0;
+  color: #fc8019; /* Swiggy orange */
+  letter-spacing: 2px;
+}
+
+.errorTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 12px 0 8px;
+}
+
+.errorText {
+  font-size: 16px;
+  max-width: 420px;
+  color: #686b78;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.errorBtn {
+  padding: 14px 28px;
+  background-color: #fc8019;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.3);
+}
+
+.errorBtn:hover {
+  background-color: #e46d0b;
+  box-shadow: 0 4px 12px rgba(252, 128, 25, 0.4);
+  transform: translateY(-1px);
+}

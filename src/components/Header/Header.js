@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import SearchBar from "../SearchBar/SearchBar";
 import styles from "./Header.module.css";
 
-const Header = ({ searchValue, setSearchValue, filterByRatings, sortOrder }) => {
+const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -12,19 +12,12 @@ const Header = ({ searchValue, setSearchValue, filterByRatings, sortOrder }) => 
 
         <div className={styles.nav}>
           <ul className={styles.navItems}>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
+            <Link to='/' className={styles.link}>Home</Link>
+            <Link to='/about' className={styles.link}>About Us</Link>
+            <Link to='/contact' className={styles.link}>Contact Us</Link>
             <li className="cart">Cart</li>
           </ul>
         </div>
-      </div>
-      <div className={styles.actions}>
-        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
-
-        <button className={styles.sortBtn} onClick={filterByRatings}>
-         {sortOrder === "ASC" ? 'Filter By Ratings ▼' : 'Filter By Ratings ▲'} 
-        </button>
       </div>
     </div>
   );

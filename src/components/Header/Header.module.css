@@ -95,4 +95,9 @@
   transform: scale(0.98);
 }
 
+.link{
+  text-decoration: none;
+  color: inherit;
+}
+
 

@@ -1,15 +1,32 @@
 .body {
-  /* background: #f9f9f9; */
   margin: 20px;
+  padding-bottom: 40px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .resContainers {
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.searchBar {
-  margin: 15px;
+.sortBtn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #fc8019;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
 }
+
+.link{
+  text-decoration: none;
+  color: inherit;
+}
+
