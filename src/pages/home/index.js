@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Shimmer from "../../components/Shimmer/Shimmer";
 import Body from "../../components/Body/Body";
+import { useOnlineStatus } from "../../utils/useOnlineStatus";
+import OfflineCard from "../../components/OfflineCard/OfflineCard";
 
 const HomePage = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -8,6 +10,7 @@ const HomePage = () => {
   const [searchValue, setSearchValue] = useState("");
   const [sortOrder, setSortOrder] = useState("ASC");
   const [loading, setLoading] = useState(false);
+  const {isOnline} = useOnlineStatus();
 
   useEffect(() => {
     fetchData();
@@ -26,6 +29,7 @@ const HomePage = () => {
     );
 
     setFilteredRestaurants(filtered);
+
   }, [searchValue, restaurants]);
 
   const fetchData = async () => {
@@ -52,6 +56,7 @@ const HomePage = () => {
     setSortOrder((prev) => (prev === "ASC" ? "DESC" : "ASC"));
   };
 
+  if (!isOnline) return <OfflineCard />
   if (loading) return <Shimmer />;
 
   return (

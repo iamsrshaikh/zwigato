@@ -35,6 +35,11 @@
   font-size: 14px;
   color: #686b78;
   margin-bottom: 12px;
+  text-align: center;
+
+  & .rating {
+    margin-top: -2px;
+  }
 }
 
 .time {

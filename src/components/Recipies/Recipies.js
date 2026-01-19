@@ -17,7 +17,7 @@ const RecipeDetails = ({ recipe }) => {
           <h1 className={styles.title}>{recipe.name}</h1>
 
           <div className={styles.meta}>
-            <span>⭐ {recipe.rating}</span>
+            <span className={styles.rating}>⭐ {recipe.rating}</span>
             <span>• {recipe.cuisine}</span>
             <span>• {recipe.difficulty}</span>
           </div>

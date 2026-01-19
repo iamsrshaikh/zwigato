@@ -100,4 +100,9 @@
   color: inherit;
 }
 
+.active {
+  font-weight: 600;
+  border-bottom: 2px solid #fc8019 ;
+}
+
 
