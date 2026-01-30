@@ -2,8 +2,6 @@ import { Outlet } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-import styles from "./Layout.module.css";
-
 const Layout = ({
   searchValue,
   setSearchValue,
@@ -11,7 +9,7 @@ const Layout = ({
   sortOrder,
 }) => {
   return (
-    <div className={styles.app}>
+    <div className='pb-8'>
       <Header
         searchValue={searchValue}
         setSearchValue={setSearchValue}
