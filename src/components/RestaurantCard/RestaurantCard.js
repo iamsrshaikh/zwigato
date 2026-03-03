@@ -8,6 +8,12 @@ const RestaurantCard = ({ details }) => {
   //   e.preventDefault();
   //   navigate(`/recipies/${details.id}`);
   // };
+
+  const onOrderButtonClick = (e) => {
+    e.preventDefault();
+    alert("Order placed successfully!");
+  };
+  
   return (
     <div className={styles.restaurantCard}>
       <img
@@ -33,7 +39,7 @@ const RestaurantCard = ({ details }) => {
         </div>
       </div>
 
-      <div className={styles.cta}>
+      <div className={styles.cta} onClick={onOrderButtonClick}>
         <button className={styles.btn}>Order</button>
       </div>
     </div>

@@ -26,11 +26,17 @@ const Body = ({
         {!resDetails || resDetails.length === 0 ? (
           <h3>No Restaurants Found</h3>
         ) : (
-          resDetails.map((details) => (
-            <Link to={`recipies/${details.id}`} key={details.id} className={styles.link}>
-              <RestaurantCard  details={details} />
-            </Link>
-          ))
+          <>
+            {resDetails.map((details) => (
+              <Link
+                to={`recipies/${details.id}`}
+                key={details.id}
+                className={styles.link}
+              >
+                <RestaurantCard details={details} />
+              </Link>
+            ))}
+          </>
         )}
       </div>
     </div>
