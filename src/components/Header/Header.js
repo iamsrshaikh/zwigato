@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import styles from "./Header.module.css";
 import { NAV_TABS } from "../../enums/navTabs";
-import {  useState } from "react";
+import {  useState, useContext } from "react";
+import UserContext from "../../context/UserContext";
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState(NAV_TABS[0].id);
+  const data = useContext(UserContext);
+
+  console.log('data', data);
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -23,6 +27,7 @@ const Header = () => {
               </div>
             ))}
             <li className="cart">Cart</li>
+            <li className="user">{data.loggedInUser}</li>
           </ul>
         </div>
       </div>
